@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-nunito, "Nunito", sans-serif);
+  background-color: var(--white, #fff);
+  color: var(--independence, #333);
+  line-height: 1.6;
+}
+
+.auth-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.05) 0%,
+    rgba(118, 75, 162, 0.05) 100%
+  );
+  min-height: 80vh;
+}
+
+.auth-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box {
+  background: var(--white, white);
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 450px;
+  animation: slideIn 0.5s ease-out;
+}
+
+.auth-box.hidden {
+  display: none;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--space-cadet, #333);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--independence, #555);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid var(--alice-blue-4, #e0e0e0);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: var(--alice-blue-2, #f9fafb);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--carolina-blue, #2db4ff);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(45, 180, 255, 0.1);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.form-buttons button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-buttons button[type="submit"] {
+  background-color: var(--carolina-blue, #2db4ff);
+  color: white;
+}
+
+.form-buttons button[type="submit"]:hover {
+  background-color: var(--sapphire, #2563eb);
+  box-shadow: 0 5px 15px rgba(45, 180, 255, 0.3);
+}
+
+.toggle-form-btn {
+  background-color: var(--alice-blue-4, #f0f0f0);
+  color: var(--independence, #333);
+}
+
+.toggle-form-btn:hover {
+  background-color: var(--alice-blue-3, #e0e0e0);
+}
+
+.message {
+  margin-top: 15px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.success {
+  background-color: var(--honey-dew, #d4edda);
+  color: var(--medium-sea-green, #155724);
+  border: 1px solid rgba(21, 87, 36, 0.2);
+}
+
+.error {
+  background-color: var(--mimi-pink, #f8d7da);
+  color: var(--deep-cerise, #721c24);
+  border: 1px solid rgba(114, 28, 36, 0.2);
+}
+
+.info {
+  background-color: var(--beau-blue, #d1ecf1);
+  color: var(--sapphire, #0c5460);
+  border: 1px solid rgba(12, 84, 96, 0.2);
+}
+
+.auth-box.welcome-box {
+  text-align: center;
+  padding: 50px 40px;
+}
+
+.auth-box.welcome-box .form-title {
+  color: var(--carolina-blue, #2db4ff);
+  margin-bottom: 20px;
+}
+
+.auth-box.welcome-box p {
+  color: var(--independence, #666);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quick-links a {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--carolina-blue, #2db4ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.quick-links a:hover {
+  background-color: var(--sapphire, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(45, 180, 255, 0.3);
+}
+
+@media (max-width: 600px) {
+  .auth-section {
+    padding: 40px 15px;
+    min-height: auto;
+  }
+
+  .auth-box {
+    padding: 30px 20px;
+    border-radius: 12px;
+  }
+
+  .form-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-buttons button {
+    width: 100%;
+  }
+
+  .auth-box.welcome-box {
+    padding: 30px 20px;
+  }
+
+  .quick-links {
+    flex-direction: column;
+  }
+
+  .quick-links a {
+    width: 100%;
+  }
+}

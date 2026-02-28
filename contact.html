@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>კონტაქტი - მანქანების გაქირავება</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
+        <a href="index.html" class="logo">
+          <img src="./assets/images/logo.svg" alt="Ridex logo" />
+        </a>
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html#home" class="navbar-link" data-nav-link
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#featured-car"
+                class="navbar-link"
+                data-nav-link
+                >FeaturedCars</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" class="navbar-link" data-nav-link
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a href="index.html#blog" class="navbar-link" data-nav-link
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="header-contact">
+            <a href="tel:88002345678" class="contact-link">571 07 20 72</a>
+            <span class="contact-time">ორშაბათი - შაბათი: 09:00 - 18:00</span>
+          </div>
+          <div id="userDisplay" class="header-user-display">
+            <span class="user-name">Not logged in</span>
+          </div>
+          <a
+            href="index.html#featured-car"
+            class="btn"
+            aria-labelledby="aria-label-txt"
+          >
+            <ion-icon name="car-outline"></ion-icon>
+            <span id="aria-label-txt">მანქანების გამოკვლევა</span>
+          </a>
+          <a href="register.html" class="btn user-btn" aria-label="პროფილი">
+            <ion-icon name="person-outline"></ion-icon>
+          </a>
+          <button
+            id="logoutBtn"
+            class="btn logout-btn-header"
+            onclick="logout()"
+            style="display: none"
+          >
+            <ion-icon name="log-out-outline"></ion-icon>
+            გამოსვლა
+          </button>
+          <button
+            class="nav-toggle-btn"
+            data-nav-toggle-btn
+            aria-label="მენიუს გახსნა/დახურვა"
+          >
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <section
+          class="section contact-section"
+          style="padding: 80px 0; background-color: #f5f5f5"
+        >
+          <div class="container">
+            <h2 class="h2 section-title" style="margin-bottom: 50px">
+              ჩვენთან <span style="color: #2db4ff">დაკავშირება</span>
+            </h2>
+
+            <div
+              class="contact-wrapper"
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                align-items: start;
+              "
+            >
+              <div class="contact-info">
+                <div
+                  class="contact-card"
+                  style="
+                    background: white;
+                    padding: 30px;
+                    border-radius: 14px;
+                    box-shadow: 3px 3px 9px hsla(240, 14%, 69%, 0.2);
+                    margin-bottom: 20px;
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 1.25rem;
+                      margin-bottom: 15px;
+                      color: #1a1a2e;
+                    "
+                  >
+                    ტელეფონი
+                  </h3>
+                  <a
+                    href="tel:88002345678"
+                    style="
+                      color: #2db4ff;
+                      font-size: 1.125rem;
+                      text-decoration: none;
+                      display: block;
+                    "
+                    >571 07 20 72</a
+                  >
+                </div>
+
+                <div
+                  class="contact-card"
+                  style="
+                    background: white;
+                    padding: 30px;
+                    border-radius: 14px;
+                    box-shadow: 3px 3px 9px hsla(240, 14%, 69%, 0.2);
+                    margin-bottom: 20px;
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 1.25rem;
+                      margin-bottom: 15px;
+                      color: #1a1a2e;
+                    "
+                  >
+                    სამუშაო საათები
+                  </h3>
+                  <p style="color: #666; margin: 0">
+                    ორშაბათი - შაბათი: 09:00 - 18:00
+                  </p>
+                </div>
+
+                <div
+                  class="contact-card"
+                  style="
+                    background: white;
+                    padding: 30px;
+                    border-radius: 14px;
+                    box-shadow: 3px 3px 9px hsla(240, 14%, 69%, 0.2);
+                  "
+                >
+                  <h3
+                    style="
+                      font-size: 1.25rem;
+                      margin-bottom: 15px;
+                      color: #1a1a2e;
+                    "
+                  >
+                    მდებარეობა
+                  </h3>
+                  <p style="color: #666; margin: 0">Tbilisi, Georgia</p>
+                </div>
+              </div>
+
+              <div
+                class="contact-form-wrapper"
+                style="
+                  background: white;
+                  padding: 40px;
+                  border-radius: 14px;
+                  box-shadow: 3px 3px 9px hsla(240, 14%, 69%, 0.2);
+                "
+              >
+                <form class="contact-form">
+                  <div class="form-group" style="margin-bottom: 20px">
+                    <label
+                      for="name"
+                      style="
+                        display: block;
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                        color: #1a1a2e;
+                      "
+                      >სახელი</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="თქვენი სახელი"
+                      style="
+                        width: 100%;
+                        padding: 12px 15px;
+                        border: 2px solid #e0e0e0;
+                        border-radius: 10px;
+                        font-size: 0.95rem;
+                        transition: 0.3s;
+                        font-family: inherit;
+                      "
+                    />
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 20px">
+                    <label
+                      for="email"
+                      style="
+                        display: block;
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                        color: #1a1a2e;
+                      "
+                      >ელ-ფოსტა</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="თქვენი ელ-ფოსტა"
+                      required
+                      style="
+                        width: 100%;
+                        padding: 12px 15px;
+                        border: 2px solid #e0e0e0;
+                        border-radius: 10px;
+                        font-size: 0.95rem;
+                        transition: 0.3s;
+                        font-family: inherit;
+                      "
+                    />
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 20px">
+                    <label
+                      for="phone"
+                      style="
+                        display: block;
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                        color: #1a1a2e;
+                      "
+                      >ტელეფონი</label
+                    >
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="თქვენი ტელეფონი"
+                      required
+                      style="
+                        width: 100%;
+                        padding: 12px 15px;
+                        border: 2px solid #e0e0e0;
+                        border-radius: 10px;
+                        font-size: 0.95rem;
+                        transition: 0.3s;
+                        font-family: inherit;
+                      "
+                    />
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 25px">
+                    <label
+                      for="message"
+                      style="
+                        display: block;
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                        color: #1a1a2e;
+                      "
+                      >შეტყობინება</label
+                    >
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="თქვენი შეტყობინება"
+                      rows="5"
+                      required
+                      style="
+                        width: 100%;
+                        padding: 12px 15px;
+                        border: 2px solid #e0e0e0;
+                        border-radius: 10px;
+                        font-size: 0.95rem;
+                        transition: 0.3s;
+                        font-family: inherit;
+                        resize: vertical;
+                      "
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn"
+                    style="
+                      width: 100%;
+                      padding: 15px;
+                      font-size: 1rem;
+                      font-weight: 600;
+                      border-radius: 10px;
+                    "
+                  >
+                    გაგზავნა
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="logo"
+              ><img src="./assets/images/logo.svg" alt="Ridex logo"
+            /></a>
+            <p class="footer-text">
+              ძებნეთ იაფი ქირავით აღებული მანქანები ნიუ იორკში. 19,000-მდე
+              მანქანის მრავალფეროვანი ფლოტით, Ridex-ი აჩვენებს მომხმარებელს
+              მიმზიდველი და ხალისიანი გამოძიების სერვისი.
+            </p>
+          </div>
+          <ul class="footer-list">
+            <li><p class="footer-list-title">კომპანია</p></li>
+            <li><a href="#" class="footer-link">ჩვენს შესახებ</a></li>
+            <li><a href="#" class="footer-link">ფასების გეგმა</a></li>
+            <li>
+              <a href="index.html#blog" class="footer-link">ჩვენი ბლოგი</a>
+            </li>
+            <li><a href="contact.html" class="footer-link">კონტაქტი</a></li>
+          </ul>
+          <ul class="footer-list">
+            <li><p class="footer-list-title">მხარდამჭერი</p></li>
+            <li><a href="#" class="footer-link">დახმარების ცენტრი</a></li>
+            <li><a href="#" class="footer-link">შეკითხვის დასმა</a></li>
+            <li>
+              <a href="#" class="footer-link">კერძო ინფორმაციის პოლიტიკა</a>
+            </li>
+            <li><a href="#" class="footer-link">პირობები და პირობები</a></li>
+          </ul>
+          <ul class="footer-list">
+            <li><p class="footer-list-title">ნიუ იორკის უბნები</p></li>
+            <li><a href="#" class="footer-link">მანჰეტენი</a></li>
+            <li><a href="#" class="footer-link">ნიუ იორკის ცენტრი</a></li>
+            <li><a href="#" class="footer-link">აპერ ისტ საიდი</a></li>
+            <li><a href="#" class="footer-link">Queen</a></li>
+            <li><a href="#" class="footer-link">თეატრის უბანი</a></li>
+            <li><a href="#" class="footer-link">მიდთაუნი</a></li>
+            <li><a href="#" class="footer-link">სოჰო</a></li>
+            <li><a href="#" class="footer-link">ჩელსი</a></li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link"
+                ><ion-icon name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="social-link"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="social-link"
+                ><ion-icon name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="social-link"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="social-link"
+                ><ion-icon name="logo-skype"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="social-link"
+                ><ion-icon name="mail-outline"></ion-icon
+              ></a>
+            </li>
+          </ul>
+          <p class="copyright">
+            &copy; 2026 <a href="#">codewithpaata</a>. პროექტი
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/auth.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
