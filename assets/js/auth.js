@@ -132,7 +132,9 @@ function logout() {
   localStorage.removeItem(USER_KEY);
   updateHeaderWithoutUser();
 
-  if (!window.location.pathname.includes("index.html")) {
+  if (window.location.pathname.includes("register.html")) {
+    window.location.reload();
+  } else if (!window.location.pathname.includes("index.html")) {
     setTimeout(() => {
       window.location.href = "index.html";
     }, 500);

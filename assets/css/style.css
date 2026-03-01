@@ -260,8 +260,12 @@ a {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
+}
+
+.header-actions .btn {
+  margin: 0 5px;
 }
 
 .header-actions .btn span {
@@ -310,6 +314,7 @@ a {
   border-radius: 8px;
   font-weight: 600;
   transition: all 0.3s ease;
+  margin: 0 5px;
 }
 
 .logout-btn-header:hover {
@@ -336,10 +341,12 @@ a {
   --shadow-2: var(--shadow-1);
   box-shadow: var(--shadow-1);
   order: 4;
+  margin: 0 5px;
 }
 
 .header-actions .btn:first-of-type {
-  order: 4;
+  order: 5;
+  margin: 0 5px;
 }
 
 .nav-toggle-btn span {

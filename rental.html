@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ავტორიზაცია - მანქანების გაქირავება</title>
+    <title>მანქანის გაქირავება</title>
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="register.css" />
+    <link rel="stylesheet" href="rental.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -92,127 +92,131 @@
 
     <main>
       <article>
-        <section class="section auth-section">
+        <section class="section rental-section">
           <div class="container">
-            <div id="registerForm" class="auth-box">
-              <h2 class="form-title">რეგისტრაცია</h2>
-              <form onsubmit="handleRegister(event)">
-                <div class="form-group">
-                  <label for="regPhoneNumber">ტელეფონის ნომერი</label>
-                  <input
-                    type="tel"
-                    id="regPhoneNumber"
-                    name="phoneNumber"
-                    required
-                    placeholder="+995-5XX-XXX-XXX"
-                  />
+            <div class="rental-content">
+              <h1 class="rental-title">მანქანის გაქირავება</h1>
+              <p class="rental-subtitle">
+                აირჩიეთ საჭირო განრიგი და დაავადებული თქვენი ინფორმაცია
+              </p>
+
+              <div class="rental-form-wrapper">
+                <div class="rental-packages">
+                  <h2>პაკეტები</h2>
+                  <div class="packages-list">
+                    <label class="package-card">
+                      <input type="radio" name="package" value="1" selected />
+                      <h3>დღე (24 საათი)</h3>
+                      <div class="package-price">x1 დღე</div>
+                      <p class="package-desc">ერთი დღის გაქირავება</p>
+                    </label>
+                    <label class="package-card">
+                      <input type="radio" name="package" value="7" />
+                      <h3>კვირა</h3>
+                      <div class="package-price">x7 დღე</div>
+                      <p class="package-desc">7 დღის გაქირავება</p>
+                    </label>
+                    <label class="package-card">
+                      <input type="radio" name="package" value="30" />
+                      <h3>თვე</h3>
+                      <div class="package-price">x30 დღე</div>
+                      <p class="package-desc">30 დღის გაქირავება</p>
+                    </label>
+                  </div>
                 </div>
 
-                <div class="form-group">
-                  <label for="regEmail">ელ-ფოსტა</label>
-                  <input
-                    type="email"
-                    id="regEmail"
-                    name="email"
-                    required
-                    placeholder="example@gmail.com"
-                  />
-                </div>
+                <form id="rentalForm" class="rental-form">
+                  <h2>გაქირავების პირობები</h2>
 
-                <div class="form-group">
-                  <label for="regFirstName">სახელი</label>
-                  <input
-                    type="text"
-                    id="regFirstName"
-                    name="firstName"
-                    required
-                    placeholder="ჯონ"
-                  />
-                </div>
+                  <div class="form-group">
+                    <label for="carId">მანქანის ID *</label>
+                    <input
+                      type="number"
+                      id="carId"
+                      name="carId"
+                      required
+                      placeholder="მანქანის ID რომელიც გირჩევნიათ"
+                    />
+                  </div>
 
-                <div class="form-group">
-                  <label for="regLastName">გვარი</label>
-                  <input
-                    type="text"
-                    id="regLastName"
-                    name="lastName"
-                    required
-                    placeholder="დოე"
-                  />
-                </div>
+                  <div class="form-group">
+                    <label
+                      >პაკეტი: <span id="selectedPackage">1 დღე</span></label
+                    >
+                    <input type="hidden" id="multiplier" value="1" />
+                  </div>
 
-                <div class="form-group">
-                  <label for="regPassword">პაროლი</label>
-                  <input
-                    type="password"
-                    id="regPassword"
-                    name="password"
-                    required
-                    placeholder="მინიმუმ 6 სიმბოლო"
-                  />
-                </div>
+                  <h2>თქვენი ინფორმაცია</h2>
 
-                <div class="form-group">
-                  <label for="regRole">როლი</label>
-                  <select id="regRole" name="role">
-                    <option value="user">მომხმარებელი</option>
-                    <option value="admin">ადმინი</option>
-                  </select>
-                </div>
+                  <div class="form-group">
+                    <label for="firstName">სახელი *</label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                      placeholder="თქვენი სახელი"
+                    />
+                  </div>
 
-                <div class="form-buttons">
-                  <button type="submit">რეგისტრაცია</button>
+                  <div class="form-group">
+                    <label for="lastName">გვარი *</label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      placeholder="თქვენი გვარი"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">ელ-ფოსტა *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="თქვენი ელ-ფოსტა"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phoneNumber">ტელეფონი *</label>
+                    <input
+                      type="tel"
+                      id="phoneNumber"
+                      name="phoneNumber"
+                      required
+                      placeholder="თქვენი ტელეფონი"
+                    />
+                  </div>
+
+                  <button type="submit" class="rental-submit-btn">
+                    გაქირავება დაიწყოს
+                  </button>
+                </form>
+              </div>
+
+              <div
+                id="successMessage"
+                class="success-message"
+                style="display: none"
+              >
+                <div class="success-content">
+                  <h3>✓ წარმატებით გაიგზავნა!</h3>
+                  <p>
+                    თქვენი გაქირავების მოთხოვნა დაიმტკიცა. ჩვენი სპეციალისტი
+                    მალე დაგიკავშირდებათ.
+                  </p>
                   <button
-                    type="button"
-                    class="toggle-form-btn"
-                    onclick="toggleForms()"
+                    onclick="location.href = 'index.html'"
+                    class="back-btn"
                   >
-                    შესვლა
+                    მთავარ გვერდზე დაბრუნება
                   </button>
                 </div>
-
-                <div id="registerMessage"></div>
-              </form>
-            </div>
-
-            <div id="loginForm" class="auth-box hidden">
-              <h2 class="form-title">შესვლა</h2>
-              <form onsubmit="handleLogin(event)">
-                <div class="form-group">
-                  <label for="loginPhoneNumber">ტელეფონის ნომერი</label>
-                  <input
-                    type="tel"
-                    id="loginPhoneNumber"
-                    name="phoneNumber"
-                    required
-                    placeholder="+995-5XX-XXX-XXX"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="loginPassword">პაროლი</label>
-                  <input
-                    type="password"
-                    id="loginPassword"
-                    name="password"
-                    required
-                    placeholder="თქვენი პაროლი"
-                  />
-                </div>
-
-                <div class="form-buttons">
-                  <button type="submit">შესვლა</button>
-                  <button
-                    type="button"
-                    class="toggle-form-btn"
-                    onclick="toggleForms()"
-                  >
-                    რეგისტრაცია
-                  </button>
-                </div>
-
-                <div id="loginMessage"></div>
-              </form>
+              </div>
             </div>
           </div>
         </section>
@@ -302,7 +306,7 @@
 
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/auth.js"></script>
-    <script src="register.js"></script>
+    <script src="./rental.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

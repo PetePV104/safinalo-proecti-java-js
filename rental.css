@@ -1,0 +1,290 @@
+.rental-section {
+  padding: 60px 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.05) 0%,
+    rgba(118, 75, 162, 0.05) 100%
+  );
+  min-height: 80vh;
+}
+
+.rental-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.rental-title {
+  font-size: 2.5rem;
+  color: var(--eerie-black, #222);
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.rental-subtitle {
+  font-size: 1rem;
+  color: var(--manatee, #999);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.rental-form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.rental-packages {
+  background: var(--white, white);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+}
+
+.rental-packages h2 {
+  font-size: 1.5rem;
+  color: var(--eerie-black, #222);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.packages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.package-card {
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(118, 75, 162, 0.05) 100%
+  );
+  border-radius: 10px;
+  border: 2px solid var(--alice-blue-4, #e8e8f0);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.package-card:hover {
+  border-color: var(--slate-blue, #665eea);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.package-card h3 {
+  font-size: 1.1rem;
+  color: var(--eerie-black, #222);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.package-price {
+  font-size: 1.8rem;
+  color: var(--slate-blue, #665eea);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.package-desc {
+  font-size: 0.875rem;
+  color: var(--manatee, #999);
+  margin: 0;
+}
+
+.rental-form {
+  background: var(--white, white);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+}
+
+.rental-form h2 {
+  font-size: 1.5rem;
+  color: var(--eerie-black, #222);
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--independence, #444);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--alice-blue-4, #e8e8f0);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--eerie-black, #222);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--slate-blue, #665eea);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input::placeholder {
+  color: var(--manatee, #999);
+}
+
+.rental-submit-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(
+    135deg,
+    var(--slate-blue, #665eea),
+    var(--deep-cerise, #c41e7f)
+  );
+  color: var(--white, white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.rental-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.rental-submit-btn:active {
+  transform: translateY(0);
+}
+
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 90%;
+  max-width: 500px;
+  animation: slideInCenter 0.5s ease-out;
+}
+
+.success-content {
+  background: var(--white, white);
+  padding: 40px 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.success-content h3 {
+  font-size: 1.5rem;
+  color: var(--medium-sea-green, #2ecc71);
+  margin-bottom: 15px;
+}
+
+.success-content p {
+  font-size: 0.95rem;
+  color: var(--manatee, #999);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.back-btn {
+  padding: 12px 30px;
+  background: var(--slate-blue, #665eea);
+  color: var(--white, white);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: var(--deep-cerise, #c41e7f);
+}
+
+@keyframes slideInCenter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.success-message::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .rental-form-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .rental-title {
+    font-size: 1.75rem;
+  }
+
+  .rental-form,
+  .rental-packages {
+    padding: 20px;
+  }
+
+  .packages-list {
+    flex-direction: row;
+  }
+
+  .package-card {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .rental-section {
+    padding: 30px 15px;
+  }
+
+  .rental-title {
+    font-size: 1.5rem;
+  }
+
+  .rental-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+
+  .packages-list {
+    flex-direction: column;
+  }
+
+  .package-card {
+    text-align: left;
+  }
+
+  .success-content {
+    padding: 25px 20px;
+  }
+}
