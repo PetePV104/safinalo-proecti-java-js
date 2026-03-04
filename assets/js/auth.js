@@ -1,15 +1,11 @@
-const API_BASE_URL = "https://rentcar.stepprojects.ge/api/Users";
-const TOKEN_KEY = "authToken";
-const USER_KEY = "currentUser";
-
 document.addEventListener("DOMContentLoaded", () => {
   initializeAuthUI();
   checkAndShowWelcomeBanner();
 });
 
 function checkAndShowWelcomeBanner() {
-  const token = localStorage.getItem(TOKEN_KEY);
-  const user = localStorage.getItem(USER_KEY);
+  const token = localStorage.getItem(window.TOKEN_KEY);
+  const user = localStorage.getItem(window.USER_KEY);
   const isIndexPage =
     window.location.pathname.includes("index.html") ||
     window.location.pathname.endsWith("/");
@@ -66,8 +62,8 @@ function showWelcomeBanner(user) {
 }
 
 function initializeAuthUI() {
-  const token = localStorage.getItem(TOKEN_KEY);
-  const user = localStorage.getItem(USER_KEY);
+  const token = localStorage.getItem(window.TOKEN_KEY);
+  const user = localStorage.getItem(window.USER_KEY);
 
   if (token && user) {
     updateHeaderWithUser(JSON.parse(user));
@@ -128,8 +124,8 @@ function updateHeaderWithoutUser() {
 }
 
 function logout() {
-  localStorage.removeItem(TOKEN_KEY);
-  localStorage.removeItem(USER_KEY);
+  localStorage.removeItem(window.TOKEN_KEY);
+  localStorage.removeItem(window.USER_KEY);
   updateHeaderWithoutUser();
 
   if (window.location.pathname.includes("register.html")) {
@@ -144,10 +140,13 @@ function logout() {
 }
 
 function isLoggedIn() {
-  return localStorage.getItem(TOKEN_KEY) && localStorage.getItem(USER_KEY);
+  return (
+    localStorage.getItem(window.TOKEN_KEY) &&
+    localStorage.getItem(window.USER_KEY)
+  );
 }
 
 function getCurrentUser() {
-  const user = localStorage.getItem(USER_KEY);
+  const user = localStorage.getItem(window.USER_KEY);
   return user ? JSON.parse(user) : null;
 }

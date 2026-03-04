@@ -101,6 +101,17 @@
               </p>
 
               <div class="rental-form-wrapper">
+                <div class="rental-action-buttons">
+                  <button
+                    type="button"
+                    class="btn"
+                    onclick="openMyRentalsModal()"
+                  >
+                    <ion-icon name="list-outline"></ion-icon>
+                    ჩემი გაქირავებები
+                  </button>
+                </div>
+
                 <div class="rental-packages">
                   <h2>პაკეტები</h2>
                   <div class="packages-list">
@@ -135,6 +146,7 @@
                       id="carId"
                       name="carId"
                       required
+                      readonly
                       placeholder="მანქანის ID რომელიც გირჩევნიათ"
                     />
                   </div>
@@ -155,6 +167,7 @@
                       id="firstName"
                       name="firstName"
                       required
+                      readonly
                       placeholder="თქვენი სახელი"
                     />
                   </div>
@@ -166,6 +179,7 @@
                       id="lastName"
                       name="lastName"
                       required
+                      readonly
                       placeholder="თქვენი გვარი"
                     />
                   </div>
@@ -177,6 +191,7 @@
                       id="email"
                       name="email"
                       required
+                      readonly
                       placeholder="თქვენი ელ-ფოსტა"
                     />
                   </div>
@@ -188,6 +203,7 @@
                       id="phoneNumber"
                       name="phoneNumber"
                       required
+                      readonly
                       placeholder="თქვენი ტელეფონი"
                     />
                   </div>
@@ -215,6 +231,31 @@
                   >
                     მთავარ გვერდზე დაბრუნება
                   </button>
+                </div>
+              </div>
+
+              <!-- Modal for My Rentals -->
+              <div
+                id="myRentalsModal"
+                class="rental-modal"
+                style="display: none"
+              >
+                <div
+                  class="modal-overlay"
+                  onclick="closeMyRentalsModal()"
+                ></div>
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2>ჩემი გაქირავებები</h2>
+                    <button class="modal-close" onclick="closeMyRentalsModal()">
+                      ×
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="rentalsList" class="rentals-list">
+                      <p class="loading-message">იტვირთება...</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

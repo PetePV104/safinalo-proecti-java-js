@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
-    const token = localStorage.getItem(TOKEN_KEY);
+    const token = localStorage.getItem(window.TOKEN_KEY);
     if (token) {
       showAuthenticatedState();
     }
@@ -42,7 +42,7 @@ async function handleRegister(event) {
   };
 
   try {
-    const response = await fetch(`${API_BASE_URL}/register`, {
+    const response = await fetch(`${window.API_BASE_URL}/Users/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,15 @@ async function handleRegister(event) {
       body: JSON.stringify(registerData),
     });
 
-    const data = await response.json();
+    let data = {};
+    try {
+      const text = await response.text();
+      if (text) {
+        data = JSON.parse(text);
+      }
+    } catch (e) {
+      console.warn("Could not parse response JSON:", e);
+    }
 
     if (response.ok) {
       showMessage(
@@ -66,7 +74,7 @@ async function handleRegister(event) {
     } else {
       showMessage(
         "registerMessage",
-        data.message || "Registration failed",
+        data.message || `Registration failed (${response.status})`,
         "error",
       );
     }
@@ -88,7 +96,7 @@ async function handleLogin(event) {
   };
 
   try {
-    const response = await fetch(`${API_BASE_URL}/login`, {
+    const response = await fetch(`${window.API_BASE_URL}/Users/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -96,12 +104,20 @@ async function handleLogin(event) {
       body: JSON.stringify(loginData),
     });
 
-    const data = await response.json();
+    let data = {};
+    try {
+      const text = await response.text();
+      if (text) {
+        data = JSON.parse(text);
+      }
+    } catch (e) {
+      console.warn("Could not parse response JSON:", e);
+    }
 
     if (response.ok) {
-      localStorage.setItem(TOKEN_KEY, data.token || data.phoneNumber);
+      localStorage.setItem(window.TOKEN_KEY, data.token || data.phoneNumber);
       localStorage.setItem(
-        USER_KEY,
+        window.USER_KEY,
         JSON.stringify({
           phoneNumber: data.phoneNumber,
           email: data.email,
@@ -114,14 +130,15 @@ async function handleLogin(event) {
       showMessage("loginMessage", "Login successful!", "success");
 
       setTimeout(() => {
-        updateHeaderWithUser(JSON.parse(localStorage.getItem(USER_KEY)));
+        updateHeaderWithUser(JSON.parse(localStorage.getItem(window.USER_KEY)));
         showAuthenticatedState();
         clearForms();
       }, 1000);
     } else {
       showMessage(
         "loginMessage",
-        data.message || "Login failed. Please check your credentials.",
+        data.message ||
+          `Login failed (${response.status}). Please check your credentials.`,
         "error",
       );
     }
