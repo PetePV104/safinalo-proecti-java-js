@@ -9,6 +9,7 @@ body {
   background-color: var(--white, #fff);
   color: var(--independence, #333);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .auth-section {
@@ -22,6 +23,19 @@ body {
     rgba(118, 75, 162, 0.05) 100%
   );
   min-height: 80vh;
+}
+
+@media (max-width: 320px) {
+  .auth-section {
+    padding: 20px 10px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-section {
+    padding: 25px 12px;
+  }
 }
 
 .auth-section .container {
@@ -38,6 +52,21 @@ body {
   width: 100%;
   max-width: 450px;
   animation: slideIn 0.5s ease-out;
+}
+
+@media (max-width: 320px) {
+  .auth-box {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-box {
+    padding: 25px 18px;
+    border-radius: 12px;
+  }
 }
 
 .auth-box.hidden {
@@ -63,8 +92,27 @@ body {
   font-weight: 600;
 }
 
+@media (max-width: 320px) {
+  .form-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .form-title {
+    font-size: 22px;
+  }
+}
+
 .form-group {
   margin-bottom: 20px;
+}
+
+@media (max-width: 320px) {
+  .form-group {
+    margin-bottom: 15px;
+  }
 }
 
 .form-group label {
@@ -73,6 +121,13 @@ body {
   color: var(--independence, #555);
   font-weight: 600;
   font-size: 14px;
+}
+
+@media (max-width: 320px) {
+  .form-group label {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
 }
 
 .form-group input,
@@ -85,6 +140,15 @@ body {
   font-family: inherit;
   transition: all 0.3s ease;
   background-color: var(--alice-blue-2, #f9fafb);
+}
+
+@media (max-width: 320px) {
+  .form-group input,
+  .form-group select {
+    padding: 10px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
 }
 
 .form-group input:focus,
@@ -197,6 +261,65 @@ body {
   box-shadow: 0 5px 15px rgba(45, 180, 255, 0.3);
 }
 
+@media (max-width: 480px) {
+  .auth-section {
+    padding: 30px 12px;
+    min-height: auto;
+  }
+
+  .auth-box {
+    padding: 25px 18px;
+    border-radius: 10px;
+  }
+
+  .form-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 11px 13px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-buttons button {
+    width: 100%;
+    padding: 11px 18px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  .auth-box.welcome-box {
+    padding: 25px 18px;
+  }
+
+  .quick-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .quick-links a {
+    width: 100%;
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 600px) {
   .auth-section {
     padding: 40px 15px;
@@ -235,5 +358,15 @@ body {
 
   .quick-links a {
     width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .form-buttons {
+    flex-direction: row;
+  }
+
+  .form-buttons button {
+    flex: 1;
   }
 }
