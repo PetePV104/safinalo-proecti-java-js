@@ -94,7 +94,7 @@
 @media (max-width: 768px) {
   .contact-wrapper {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
 
   .contact-card {
@@ -102,11 +102,16 @@
   }
 
   .contact-card h3 {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .contact-card a {
+    font-size: 1rem;
   }
 
   .contact-form-wrapper {
-    padding: 30px;
+    padding: 25px;
   }
 
   .form-group {
@@ -115,74 +120,169 @@
 
   .form-group label {
     font-size: 0.9rem;
+    margin-bottom: 8px;
   }
 
   .form-group input,
   .form-group textarea {
-    padding: 11px 12px;
+    padding: 10px 12px;
     font-size: 0.9rem;
   }
 
   .form-group textarea {
     min-height: 100px;
   }
+}
 
-  @media (max-width: 480px) {
-    .contact-wrapper {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    .contact-card {
-      padding: 15px;
-    }
-
-    .contact-card h3 {
-      font-size: 1rem;
-      margin-bottom: 12px;
-    }
-
-    .contact-card a {
-      font-size: 1rem;
-    }
-
-    .contact-form-wrapper {
-      padding: 20px;
-    }
-
-    .form-group {
-      margin-bottom: 12px;
-    }
-
-    .form-group label {
-      font-size: 0.85rem;
-      margin-bottom: 8px;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      padding: 10px 12px;
-      font-size: 0.9rem;
-    }
-
-    .form-group textarea {
-      min-height: 80px;
-    }
+@media (max-width: 480px) {
+  .contact-wrapper {
+    gap: 15px;
   }
 
-  @media (max-width: 360px) {
-    .contact-card {
-      padding: 12px;
-    }
+  .contact-card {
+    padding: 15px;
+  }
 
-    .contact-form-wrapper {
-      padding: 15px;
-    }
+  .contact-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
 
-    .form-group input,
-    .form-group textarea {
-      padding: 9px 10px;
-      font-size: 0.85rem;
-    }
+  .contact-card a,
+  .contact-card p {
+    font-size: 0.9rem;
+  }
+
+  .contact-form-wrapper {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 9px 10px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+  }
+
+  .form-group textarea {
+    min-height: 80px;
+  }
+
+  button[type="submit"] {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-wrapper {
+    gap: 12px;
+  }
+
+  .contact-card {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .contact-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .contact-card a,
+  .contact-card p {
+    font-size: 0.85rem;
+  }
+
+  .contact-form-wrapper {
+    padding: 15px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-group label {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px 9px;
+    font-size: 0.8rem;
+  }
+
+  .form-group textarea {
+    min-height: 70px;
+  }
+
+  button[type="submit"] {
+    padding: 9px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .contact-wrapper {
+    gap: 10px;
+  }
+
+  .contact-card {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .contact-card h3 {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+
+  .contact-card a,
+  .contact-card p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .contact-form-wrapper {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .form-group {
+    margin-bottom: 8px;
+  }
+
+  .form-group label {
+    font-size: 0.7rem;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 7px 8px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+  }
+
+  .form-group textarea {
+    min-height: 60px;
+  }
+
+  button[type="submit"] {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+    margin-top: 5px;
   }
 }
