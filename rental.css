@@ -321,7 +321,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .rental-section {
     padding: 30px 15px;
   }
@@ -336,6 +336,7 @@
   }
 
   .rental-form-wrapper {
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 

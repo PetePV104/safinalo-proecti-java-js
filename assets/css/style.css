@@ -1043,7 +1043,7 @@ a {
   }
 
   .header-actions {
-    gap: 30px;
+    gap: 20px;
   }
 
   .header-contact {
@@ -1142,6 +1142,14 @@ a {
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
+  }
+
+  .header-actions {
+    gap: 20px;
+  }
+
+  .header-user-display {
+    display: flex;
   }
 
   .hero .container {
@@ -1252,7 +1260,7 @@ a {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   :root {
     --fs-1: 1.75rem;
     --fs-2: 1.3rem;
@@ -1268,24 +1276,44 @@ a {
 
   .header .container {
     height: 60px;
-    padding: 0 10px;
+    padding: 0 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .header-actions {
-    gap: 8px;
+    gap: 6px;
+    flex-wrap: nowrap;
+    min-width: auto;
+    max-width: fit-content;
   }
 
   .header-actions .btn {
-    margin: 0 3px;
+    margin: 0;
+    padding: 8px;
+    min-width: auto;
+  }
+
+  .header-contact {
+    display: none;
   }
 
   .header-user-display {
-    padding: 6px 10px;
-    gap: 6px;
+    padding: 6px 8px;
+    gap: 4px;
+    flex-shrink: 1;
+    min-width: 0;
+    order: 0;
+    display: none;
   }
 
   .header-user-display .user-name {
-    font-size: 12px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .logo img {

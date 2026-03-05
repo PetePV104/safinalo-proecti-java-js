@@ -259,7 +259,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .auth-section {
     padding: 30px 15px;
     min-height: auto;
