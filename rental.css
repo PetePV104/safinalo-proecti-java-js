@@ -441,7 +441,6 @@
   }
 }
 
-/* Modal Styles */
 .rental-modal {
   position: fixed;
   top: 0;
@@ -660,7 +659,6 @@
   font-size: 1.1rem;
 }
 
-/* My Rentals Button */
 .rental-action-buttons {
   margin-bottom: 20px;
   display: flex;
@@ -691,7 +689,6 @@
   box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
 }
 
-/* Login Required Message */
 .login-required-message {
   background-color: #fff3cd;
   border: 2px solid #ffc107;

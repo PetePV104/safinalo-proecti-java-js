@@ -1,3 +1,8 @@
+.contact-section {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;

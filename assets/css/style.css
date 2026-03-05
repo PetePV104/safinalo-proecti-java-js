@@ -42,7 +42,6 @@
   --shadow-2: 3px 3px 9px hsla(204, 92%, 59%, 0.3);
 }
 
-/* Mobile-first base adjustments */
 @media (max-width: 320px) {
   :root {
     --fs-1: 1.5rem;
@@ -113,7 +112,6 @@ button {
   cursor: pointer;
 }
 
-/* Mobile-friendly inputs and touch targets */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -1399,7 +1397,6 @@ a {
 }
 
 @media (min-width: 350px) {
-  /* Mobile base optimizations */
   body {
     font-size: 14px;
   }
